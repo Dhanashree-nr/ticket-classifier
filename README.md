@@ -26,3 +26,42 @@ A simple **React-based Ticket Classifier** app that helps categorize and manage 
 ```bash
 git clone https://github.com/Dhanashree-nr/ticket-classifier.git
 cd ticket-classifier
+2️⃣ Install Dependencies
+bash
+Copy code
+npm install
+3️⃣ Run Locally
+bash
+Copy code
+npm start
+4️⃣ Build for Production
+bash
+Copy code
+npm run build
+📂 Project Structure
+csharp
+Copy code
+ticket-classifier/
+│── public/            # Static files
+│── src/               # React components & logic
+│   ├── App.js         # Main app component
+│   ├── index.js       # Entry point
+│   └── ...            # Other components
+│── package.json       # Project dependencies & scripts
+│── README.md          # Documentation
+🌍 Deployment
+This project is deployed on Netlify.
+To deploy your own version:
+
+Push code to GitHub
+
+Connect your repo to Netlify
+
+Set build command: npm run build
+
+Set publish directory: build/
+
+Deploy 🚀
+
+📜 License
+This project is licensed under the MIT License – feel free to use and modify it.
