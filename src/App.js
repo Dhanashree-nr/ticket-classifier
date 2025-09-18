@@ -1,52 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { AlertCircle, CheckCircle, Clock, User, Tag, TrendingUp } from 'lucide-react';
-
-// Enhanced training data with more examples
-const TRAINING_DATA = [
-  // Authentication & Access
-  { text: "I forgot my password, how to reset it?", category: "Authentication & Access", subcategory: "Password reset", priority: "Medium" },
-  { text: "I can't log in, password is incorrect", category: "Authentication & Access", subcategory: "Login issues", priority: "Medium" },
-  { text: "My account is locked out", category: "Authentication & Access", subcategory: "Account lockouts", priority: "High" },
-  { text: "2FA not working", category: "Authentication & Access", subcategory: "Two-factor authentication", priority: "High" },
-  { text: "Reset my password please", category: "Authentication & Access", subcategory: "Password reset", priority: "Medium" },
-  { text: "Cannot access my account", category: "Authentication & Access", subcategory: "Login issues", priority: "Medium" },
-  { text: "Password expired", category: "Authentication & Access", subcategory: "Password reset", priority: "Medium" },
-  { text: "Login button not responding", category: "Authentication & Access", subcategory: "Login issues", priority: "Medium" },
-  
-  // Account Management
-  { text: "How to see leave balance?", category: "Account Management", subcategory: "Leave balance", priority: "Low" },
-  { text: "Update my profile information", category: "Account Management", subcategory: "Profile updates", priority: "Low" },
-  { text: "Check my vacation days", category: "Account Management", subcategory: "Leave balance", priority: "Low" },
-  { text: "Change my email address", category: "Account Management", subcategory: "Profile updates", priority: "Low" },
-  { text: "How many sick days do I have?", category: "Account Management", subcategory: "Leave balance", priority: "Low" },
-  { text: "Delete my account", category: "Account Management", subcategory: "Account deletion", priority: "High" },
-  { text: "Update personal details", category: "Account Management", subcategory: "Profile updates", priority: "Low" },
-  
-  // Technical Issues
-  { text: "Application keeps crashing", category: "Technical Issues", subcategory: "Application errors", priority: "High" },
-  { text: "Page loading very slow", category: "Technical Issues", subcategory: "Performance problems", priority: "Medium" },
-  { text: "Error 500 when submitting form", category: "Technical Issues", subcategory: "Application errors", priority: "High" },
-  { text: "Data not syncing properly", category: "Technical Issues", subcategory: "Data sync problems", priority: "Medium" },
-  { text: "Feature not working", category: "Technical Issues", subcategory: "Feature malfunctions", priority: "Medium" },
-  { text: "System down", category: "Technical Issues", subcategory: "Application errors", priority: "High" },
-  { text: "Integration failed", category: "Technical Issues", subcategory: "Integration issues", priority: "Medium" },
-  
-  // Feature Requests & Questions
-  { text: "How to export data?", category: "Feature Requests & Questions", subcategory: "How-to questions", priority: "Low" },
-  { text: "Can we get dark mode?", category: "Feature Requests & Questions", subcategory: "Feature requests", priority: "Low" },
-  { text: "Need training on new features", category: "Feature Requests & Questions", subcategory: "Training needs", priority: "Low" },
-  { text: "Where is the user manual?", category: "Feature Requests & Questions", subcategory: "Documentation requests", priority: "Low" },
-  { text: "How do I create a report?", category: "Feature Requests & Questions", subcategory: "How-to questions", priority: "Low" },
-  { text: "Request new dashboard feature", category: "Feature Requests & Questions", subcategory: "Feature requests", priority: "Low" },
-  
-  // Billing & Subscriptions
-  { text: "Payment failed", category: "Billing & Subscriptions", subcategory: "Payment issues", priority: "High" },
-  { text: "Need invoice copy", category: "Billing & Subscriptions", subcategory: "Invoice questions", priority: "Low" },
-  { text: "Upgrade subscription", category: "Billing & Subscriptions", subcategory: "Subscription changes", priority: "Medium" },
-  { text: "Cancel my plan", category: "Billing & Subscriptions", subcategory: "Subscription changes", priority: "Medium" },
-  { text: "Wrong charge on card", category: "Billing & Subscriptions", subcategory: "Billing disputes", priority: "High" },
-  { text: "Downgrade account", category: "Billing & Subscriptions", subcategory: "Subscription changes", priority: "Medium" }
-];
+import React, { useState } from 'react';
+import { AlertCircle, CheckCircle, Clock, Tag, TrendingUp } from 'lucide-react';
 
 // Category definitions with keywords
 const CATEGORIES = {
