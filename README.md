@@ -41,3 +41,31 @@ npm start
 ### 4️⃣ Build for Production
 ```bash
 npm run build
+```
+---
+## 📂 Project Structure
+```text
+ticket-classifier/
+│── public/            # Static files
+│── src/               # React components & logic
+│   ├── App.js         # Main app component
+│   ├── index.js       # Entry point
+│   └── ...            # Other components
+│── package.json       # Project dependencies & scripts
+│── README.md          # Documentation
+```
+---
+## 🌍 Deployment
+This project is deployed on Netlify.
+
+To deploy your own version:
+
+1. Push code to GitHub
+2. Connect your repo to Netlify
+3. Set build command: `npm run build`
+4. Set publish directory: `build/`
+5. Deploy 🚀
+
+## 📜 License
+This project is licensed under the MIT License – feel free to use and modify it.
+
