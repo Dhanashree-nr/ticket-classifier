@@ -28,16 +28,16 @@ git clone https://github.com/Dhanashree-nr/ticket-classifier.git
 cd ticket-classifier
 ```
 ---
-###2️⃣ Install Dependencies
+### 2️⃣ Install Dependencies
 ```bash
 npm install
 ```
 ---
-###3️⃣ Run Locally
+### 3️⃣ Run Locally
 ```bash
 npm start
 ```
 ---
-###4️⃣ Build for Production
+### 4️⃣ Build for Production
 ```bash
 npm run build
